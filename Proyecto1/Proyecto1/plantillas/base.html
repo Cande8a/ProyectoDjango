@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>
+        {% block title %} {% endblock %}
+
+    </title>
+
+</head>
+<body>
+    <h1 style = "background-color: darkgrey; color:darkslategrey; text-align:center">Pepsi</h1>
+
+    {% include "superior/barra.html" %}
+    <h3 style="text-align:center">SuperBowl</h3>
+
+    {% block content %}
+    {% endblock %}
+
+    <p style = "background-color: darkgrey; color:darkslategrey; text-align:right">Gracias por su atención</p>
+
+</body>
+
+</html>

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Proyecto1.views import saludo , despedida , dameFecha, calcularEdad
+from Proyecto1.views import saludo , despedida , PepsiCo , Pepsi , dameFecha, calcularEdad
 
 
 
@@ -26,6 +26,8 @@ urlpatterns = [
     path("ya/", despedida),
     path("now/", dameFecha),
     path("edad/<int:edad>/<int:anio>", calcularEdad),
+    path("Pepsi/", Pepsi),
+    path("PepsiCo/", PepsiCo),
 ] 
 
 #en el path de calcularEdad pongo esa /<int:anio> porque en el path paso un numero, pero necesito aclarar que es de tipo entero, y los paths solo reciben strings (algo asi era?)

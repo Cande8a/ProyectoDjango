@@ -31,6 +31,15 @@ def saludo(request): #Función vista (primera vista): devuelve una respuesta con
 
     return render(request, "miplantilla.html", {"nombre_persona":p1.nombre , "apellido_persona":p1.apellido , "ahora":ahora , "temas": temas})
 
+def Pepsi(request):
+    fecha_actual = datetime.datetime.now()
+    return render(request, "Pepsi.html" , {"dameFecha":fecha_actual})
+
+def PepsiCo(request):
+    fecha_actual = datetime.datetime.now()
+    return render(request, "PepsiCo.html" , {"dameFecha":fecha_actual})
+    
+
 def despedida(request): 
     documento2 = """<html>
     <body>
