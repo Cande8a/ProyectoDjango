@@ -2,9 +2,11 @@ from datetime import datetime
 from django.http import HttpResponse
 import datetime
 from django.template import Template , Context
+from django.template import loader
+from django.shortcuts import render
 
 class Persona(object):
-    def __init__(self, nombre, apellido):
+    def __init__(self, nombre, apellido): 
         self.nombre = nombre
         self.apellido = apellido
 
@@ -18,15 +20,16 @@ def saludo(request): #Función vista (primera vista): devuelve una respuesta con
     ahora = datetime.datetime.now()
     temas = ["plantillas", "despliegue", "vistas", "modelo", "formularios"]
 
-    doc_externo = open("D:/Programacion/ProjectosDjango/Proyecto1/Proyecto1/plantillas/miplantilla.html")
+    #doc_externo = open("D:/Programacion/ProjectosDjango/Proyecto1/Proyecto1/plantillas/miplantilla.html")
 
-    plt = Template(doc_externo.read())
-    doc_externo.close()
+    #plt = Template(doc_externo.read())
+    #doc_externo.close()
 
-    ctx = Context({"nombre_persona":p1.nombre , "apellido_persona":p1.apellido , "ahora":ahora , "temas": temas}) 
-    documento = plt.render(ctx)
+    #doc_externo = loader.get_template('miplantilla.html')
+    #ctx = Context({"nombre_persona":p1.nombre , "apellido_persona":p1.apellido , "ahora":ahora , "temas": temas}) 
+    #documento = doc_externo.render({"nombre_persona":p1.nombre , "apellido_persona":p1.apellido , "ahora":ahora , "temas": temas})
 
-    return HttpResponse(documento)
+    return render(request, "miplantilla.html", {"nombre_persona":p1.nombre , "apellido_persona":p1.apellido , "ahora":ahora , "temas": temas})
 
 def despedida(request): 
     documento2 = """<html>
