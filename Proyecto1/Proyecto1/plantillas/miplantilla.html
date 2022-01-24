@@ -1,0 +1,39 @@
+<html>
+    <body>
+    <h1 style="color: blue">
+        <strong>This is my first Django Project</strong>
+    </h1>
+    
+    {# NO TEMAS DISEÑADOR! IGNORA ESTA PARTE #} 
+
+    {% comment %} NO TEMAS DISEÑADOR
+        IGNORA ESTA PARTE
+    {% endcomment %} 
+
+    {% if nombre_persona == 'Juanito' %}    
+    <h3><p style="color:cadetblue">A este curso lo imparte el profesor titular</p></h3>
+    {% else %} 
+    <p style= "color:crimson">Al curso lo est&aacute; dictando un impostor!</p>
+    {% endif %}
+
+    
+    <p>El nombre del profe es: {{nombre_persona|lower}} {{apellido_persona.upper}} </p>
+    <p>Ahorita ya es: {{ahora.day}} / {{ahora.month}} / {{ahora.year}}</p>
+    <p><strong>Temas del curso:</strong></p>
+    <p>
+        <ul>
+        {% if temas %} 
+               
+            {% for elTema in temas %}
+            
+            <li>{{elTema|first|lower }}</li>
+
+            {% endfor %} 
+        {% else %}
+            <p>No hay elementos que mostrar.</p>
+        {% endif %}  
+        </ul>    
+
+    </p>
+</body>
+    </html>

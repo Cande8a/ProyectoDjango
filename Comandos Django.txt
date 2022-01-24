@@ -1,0 +1,16 @@
+En entorno local:
+Crear proyecto:
+
+C:\Users\jonat>D:
+
+D:\>cd D:\Programacion\ProjectosDjango
+
+D:\Programacion\ProjectosDjango>
+D:\Programacion\ProjectosDjango>django-admin startproject "Nombre del proyecto sn comillas"
+D:\Programacion\ProjectosDjango>cd Proyecto 1
+#Muestra todas las cosas que puedo hacer con manage.py:
+D:\Programacion\ProjectosDjango\Proyecto1>python manage.py help
+D:\Programacion\ProjectosDjango\Proyecto1>python manage.py migrate #y aparece la base de datos sql en la carpeta Proyecto1
+
+
+
