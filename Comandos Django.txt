@@ -12,5 +12,16 @@ D:\Programacion\ProjectosDjango>cd Proyecto 1
 D:\Programacion\ProjectosDjango\Proyecto1>python manage.py help
 D:\Programacion\ProjectosDjango\Proyecto1>python manage.py migrate #y aparece la base de datos sql en la carpeta Proyecto1
 
+Comandos GitHub desde terminal de VSC (esto es si ya hice commit de la carpeta en la q estoy)
+>git add .
+>git commit
+
+#A esto lo pongo en la q se abre chiquita:
+i
+"nombre commit"
+escape
+:wq
+
+>git push origin main
 
 
